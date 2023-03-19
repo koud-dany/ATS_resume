@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- icon css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<!-- style css -->
+<!-- <link rel="stylesheet" href="../statics/css/style.css"> -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+   <div class="row-input" >
+    <form method="POST" action="{{ url_for('process_text') }}" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col">
+                
+                <label for="name">Resume:</label>
+                <textarea id="text1" name="text1" rows="100" cols="50"> </textarea>
+              </div>
+              <div class="col">
+                <label for="name">Job description:</label>
+                <textarea id="text2" name="text2" rows="100" cols="50">
+                </textarea>
+              </div>
+            </div>
+        <input id="pdf-upload" type="file" name="file" >
+        <input type="submit" value="submit">
+      </form>
+</div> 
+
+ <!-- <script src="../statics/js/app.js"></script> -->
+ <script  src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <!-- Include pdf.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+
+ 
+ 
+
+</body>
+</html>

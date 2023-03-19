@@ -1,0 +1,2 @@
+# **ATS resume SCore checker**
+This App is a free resume keyword scanner for job seekers. Our tool intelligently identifies skills and keywords missing from your resume when compared to a job description.

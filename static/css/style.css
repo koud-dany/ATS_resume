@@ -1,0 +1,37 @@
+.row-input  {
+    position:  absolute;
+    top :80px;
+    left: 600px;
+    width: 1000px;
+    height:1000px;
+ 
+}
+
+.col{
+
+width: 300px;
+height: 700px  ;
+border-block: solid black;
+border-left:  solid #000;
+border-right:solid #000;
+background-color: rgb(215, 217, 220);
+}
+    #text1  {
+    top: 30px;
+    height:400px;
+    font-size:14pt;
+}
+#text2  {
+    top: 30px;
+    height:400px;
+    font-size:14pt;
+}
+
+.card {
+
+    position:  absolute;
+    top :200px;
+    left: 800px;
+    width: 500px;
+    height:500px;   
+}
