@@ -80,7 +80,7 @@ def data(path, text):
 
   return file
 
-  @app.route('/', methods=['GET'])
+  @app.route('/')
 def index():
     return render_template('index.html')
 
