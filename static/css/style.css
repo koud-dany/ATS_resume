@@ -1,9 +1,9 @@
 .row-input  {
     position:  absolute;
     top :80px;
-    left: 600px;
+    left: 300px;
     width: 1000px;
-    height:1000px;
+    height:800px;
  
 }
 
@@ -27,11 +27,11 @@ background-color: rgb(215, 217, 220);
     font-size:14pt;
 }
 
-.card {
+/* .card {
 
     position:  absolute;
     top :200px;
     left: 800px;
     width: 500px;
     height:500px;   
-}
+} */

@@ -12,15 +12,55 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://media2.giphy.com/media/dtHmALzm2INLfdLjcR/200w.webp?cid=ecf05e478lwxn8c7sgfkb1lh6ekinp578hvvjvsc9mly187l&rid=200w.webp&ct=g" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Resume scan results</h5>
-          <p class="card-text"> {{scr}}</p>
-          <a href="{{url_for('index')}}" class="btn btn-primary">Go to home page</a>
+   
+      <div class="row">
+        <div class="col"> <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://media2.giphy.com/media/dtHmALzm2INLfdLjcR/200w.webp?cid=ecf05e478lwxn8c7sgfkb1lh6ekinp578hvvjvsc9mly187l&rid=200w.webp&ct=g" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Resume scan results</h5>
+            <p class="card-text"> {{dict_['relevance']}}% relevant to the job post </p>
+            <p class="card-text"> skills matching score : {{dict_['skill_matching_score']}} %</p>
+            <p class="card-text"> Out of <strong> {{dict_['total_skill']}}</strong> skills we have <strong> {{dict_['number_match']}} </strong> matches with a ratio of <strong> {{dict_['ratio']}} %</strong></p>
+            <a href="{{url_for('index')}}" class="btn btn-primary">Go to home page</a>
+          </div>
+        </div></div>
+        <div class="col" style=" overflow-y: auto;">
+          <h3>report resume matching</h3>
+          <table>
+          {% for table in table1 %}
+          
+          {{ table|safe }}
+          {% endfor %}
+        </table>
+        </div>
+        <div class="col" style=" overflow-y: auto; ">
+          <h3></h3>
+          <table>
+          {% for table in table2 %}
+          
+          {{ table|safe }}
+          {% endfor %}
+        </table>
+        </div>
+        <div class="col" style=" overflow-y: auto; ">
+          <h3></h3>
+          <table>
+          {% for table in table3 %}
+          
+          {{ table|safe }}
+          {% endfor %}
+        </table>
+        </div>
+        <div class="col" style=" overflow-y: auto;">
+          <h3></h3>
+          <table>
+          {% for table in table4 %}
+          
+          {{ table|safe }}
+          {% endfor %}
+        </table>
         </div>
       </div>
-
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
