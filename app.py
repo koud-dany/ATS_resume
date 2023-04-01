@@ -14,9 +14,7 @@ from docx import Document
 
 import PyPDF2
 import docx
-import threading
 from flask import Flask, request, render_template, url_for, redirect
-from pyngrok import ngrok
 
 import spacy
 nlp = spacy.load("en_core_web_sm")
@@ -73,8 +71,8 @@ def data(path, text):
   # Create a new Word document
   doc_= docx.Document()
   doc_.add_paragraph(js)
-  doc_.save("/content/drive/MyDrive/ats_app/docs/text.docx")
-  job = ResumeParser("/content/drive/MyDrive/ats_app/docs/text.docx").get_extracted_data()
+  doc_.save("docs/text.docx")
+  job = ResumeParser("docs/text.docx").get_extracted_data()
   file['resume']= resume
   file['job']= job
 
@@ -90,7 +88,7 @@ def process_text():
     if request.method == 'POST':
 
         f=request.files['file']
-        path=f"/content/drive/MyDrive/ats_app/docs/{f.filename}"  
+        path=f"docs/{f.filename}"  
         f.save(path)
         text1 = request.form['text1']
         text2= request.form['text2']
